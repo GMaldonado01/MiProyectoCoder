@@ -93,7 +93,7 @@
 }
 
 .imagenesProductos {
-    margin-top: 25px;
+    margin-top: 7%;
     width: 100%;
     display: grid;
     align-content: center;
@@ -103,6 +103,7 @@
         "img1   img2    img3"
         "img4   img5    img6";
     grid-gap: 15px;
+
 }
 
 .img1 {
@@ -201,7 +202,7 @@
 }
 
 .imagenesEventos {
-    margin-top: 25px;
+    margin-top: 7%;
     width: 100%;
     display: grid;
     align-content: center;
