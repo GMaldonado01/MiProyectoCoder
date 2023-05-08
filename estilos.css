@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
 .navbar {
     background-color: rgb(233, 161, 165);
 }
@@ -40,7 +42,18 @@
     text-align: center;
     background-color: rgb(248, 224, 188);
     justify-content: center;
-    margin-top: 3%;
+    margin-top: 50PX;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.XL {
+    font-size: xx-large;
+    text-shadow: 2px 2px rgb(233, 161, 165)
+}
+
+.L {
+    font-size: x-largE;
+    text-shadow: 2px 2px rgb(233, 161, 165)
 }
 
 .footer {
