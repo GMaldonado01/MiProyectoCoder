@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../estilos/styles.css">
     <title>TalitaKum</title>
 </head>
 
 <body class="todo">
-    <nav class="navbar navbar-expand-md  navbar-dark">
+    <nav class="navbar navbar-expand-md navbar-dark">
         <!-- Brand -->
         <a class="navbar-brand" href="#"><img class="logoTalita"
-                src="./multimedia/Perfil IG_TK_Mesa de trabajo 1 (1).png" alt="TalitaKum"></a>
+                src="../multimedia/Perfil IG_TK_Mesa de trabajo 1 (1).png" alt="TalitaKum"></a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -44,27 +44,32 @@
         </div>
     </nav>
 
-    <div class="container imagenesProductos">
-        <div class="img1">
-
+    <h1 class="pedido">HACENOS TU PEDIDO</h1>
+    <div class="row formulario">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
         </div>
-        <div class="img2">
-
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
         </div>
-        <div class="img3">
-
+    </div>
+    <br>
+    <div class="row formulario">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Direccion" aria-label="Direccion">
         </div>
-        <div class="img4">
-
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Localidad" aria-label="Localidad">
         </div>
-        <div class="img5">
-
-        </div>
-        <div class="img6">
-
-        </div>
-
-
+    </div>
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Hacenos tu pedido" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea"></label>
+        <iframe class="mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d695.7146802583163!2d-61.46968392341183!3d-31.254428734585264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95caae55b9ad8dcd%3A0xae1e0b6932f45ac7!2sA.%20D%C3%ADaz%20142%2C%20Rafaela%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1681934931318!5m2!1ses!2sar"
+            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
 
     <footer class="footer">
@@ -88,6 +93,7 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
 
+</body>
 
 </body>
 

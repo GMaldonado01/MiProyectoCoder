@@ -1,0 +1,20 @@
+.navbar {
+    background-color: $secondColor;
+
+    img {
+        height: 40px;
+    }
+}
+
+
+.nav-link {
+    color: $mainColor
+}
+
+.navbar-toggler {
+    border: none;
+
+    .fa-bars {
+        color: $mainColor
+    }
+}

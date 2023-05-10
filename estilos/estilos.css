@@ -121,7 +121,7 @@
 
 .img1 {
     grid-area: img1;
-    background-image: url(./multimedia/alfa.jpeg);
+    background-image: url(../multimedia/alfa.jpeg);
     background-size: cover;
     background-position: center;
 }

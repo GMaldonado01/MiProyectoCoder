@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,18 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../estilos/styles.css">
     <title>TalitaKum</title>
+
 </head>
 
 <body class="todo">
-    <nav class="navbar navbar-expand-md navbar-dark">
+
+    <nav class="navbar navbar-expand-md  navbar-dark">
         <!-- Brand -->
         <a class="navbar-brand" href="#"><img class="logoTalita"
-                src="./multimedia/Perfil IG_TK_Mesa de trabajo 1 (1).png" alt="TalitaKum"></a>
+                src="../multimedia/Perfil IG_TK_Mesa de trabajo 1 (1).png" alt="TalitaKum"></a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -44,32 +52,35 @@
         </div>
     </nav>
 
-    <h1 class="pedido">HACENOS TU PEDIDO</h1>
-    <div class="row formulario">
-        <div class="col">
-            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+    <div class="container-fluid">
+        <div class=" row">
+            <aside class="col-md-6 nleft">
+                <img src="../multimedia/WhatsApp Image 2023-03-28 at 17.59.21.jpeg" alt="">
+            </aside>
+            <aside class="col-md-6 nright texto">
+                <p>
+                <p class="XL"> Para las personas que no me conocen, soy Virgi y cocinar es mi pasion 💛</p>
+                <br>
+                <p class="L">⏰ Hace tiempo comencé este emprendimiento que cada día me gusta más.</p>
+                <br>
+                <p class="XL"> 👩🏾‍🍳 Entre aromas, texturas, sabores encuentro formas de compartir momentos. Porque
+                    como sabemos,
+                    la
+                    comida une.</p>
+                <br>
+                <p class="L">🧉⭐️ Cocino para todos los momentos del día. Desayuno, media mañana, almuerzo, merienda y
+                    cena.
+                    ustedes.</p>
+                <br>
+                <p class="XL"> 📝 Siempre trato de que cada receta salga mejor, pruebo, invento, corrijo.</p>
+                <br>
+                <p class="L"> Soy Virgi y me gusta cuando me piden lo que hago, porque para mi es una forma de dar y
+                    recibir.</p>
+                </p>
+            </aside>
+
         </div>
-        <div class="col">
-            <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
-        </div>
-    </div>
-    <br>
-    <div class="row formulario">
-        <div class="col">
-            <input type="text" class="form-control" placeholder="Direccion" aria-label="Direccion">
-        </div>
-        <div class="col">
-            <input type="text" class="form-control" placeholder="Localidad" aria-label="Localidad">
-        </div>
-    </div>
-    <div class="form-floating">
-        <textarea class="form-control" placeholder="Hacenos tu pedido" id="floatingTextarea"></textarea>
-        <label for="floatingTextarea"></label>
-        <iframe class="mapa"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d695.7146802583163!2d-61.46968392341183!3d-31.254428734585264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95caae55b9ad8dcd%3A0xae1e0b6932f45ac7!2sA.%20D%C3%ADaz%20142%2C%20Rafaela%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1681934931318!5m2!1ses!2sar"
-            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+
     </div>
 
     <footer class="footer">
@@ -79,8 +90,6 @@
             <i class="fa-brands fa-tiktok"></i>
             <i class="fa-brands fa-whatsapp"></i>
         </div>
-
-
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -92,9 +101,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
-        
-</body>
 
-</body>
 
 </html>
