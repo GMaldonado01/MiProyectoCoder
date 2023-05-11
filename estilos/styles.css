@@ -50,6 +50,12 @@
   align-items: center;
   margin-top: 1.5%;
   justify-content: center;
+  animation: imagenMovimiento 2s;
+}
+@keyframes imagenMovimiento {
+  100% {
+    scale: 0.5;
+  }
 }
 .todo .texto {
   text-align: center;
@@ -59,11 +65,11 @@
   font-family: "Ubuntu", sans-serif;
 }
 .todo .texto .XL {
-  font-size: xx-large;
+  font-size: x-large;
   text-shadow: 2px 2px rgb(233, 161, 165);
 }
 .todo .texto .L {
-  font-size: x-large;
+  font-size: largE;
   text-shadow: 2px 2px rgb(233, 161, 165);
 }
 

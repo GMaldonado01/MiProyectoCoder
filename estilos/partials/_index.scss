@@ -12,7 +12,15 @@
             align-items: center;
             margin-top: 1.5%;
             justify-content: center;
+            animation: imagenMovimiento 2s;
         }
+    }
+
+    @keyframes imagenMovimiento {
+        100% {
+            scale: 0.5;
+        }
+
     }
 
     .texto {
@@ -29,7 +37,7 @@
 
         .L {
             font-size: largE;
-            text-shadow: 2px 2px $secondColor
+            text-shadow: 2px 2px $secondColor;
         }
     }
 }
