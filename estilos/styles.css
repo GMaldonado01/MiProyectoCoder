@@ -237,7 +237,7 @@
 }
 .imagenesEventos .imgEventos6 {
   grid-area: img6;
-  background-image: url(../../multimedia/unicornio.jpeg);
+  background-image: url(../multimedia/unicornio.jpeg);
   background-size: cover;
   background-position: center;
 }
