@@ -280,17 +280,20 @@
   margin-top: 30px;
   text-align: center;
   color: rgb(233, 161, 165);
-  margin-bottom: 30px;
 }
 
-.form-control {
-  width: 175vh;
-  margin-left: 20px;
-  margin-right: 20px;
+.form {
+  width: 80vh;
+  height: 50px;
+  margin-bottom: 15px;
+  margin-left: 7.5vh;
 }
 
-.form-floating {
-  margin-top: 20PX;
-  margin-left: 20px;
-  margin-right: 20px;
+textarea {
+  margin-left: 45vh;
+}
+
+.mapa {
+  width: 170vh;
+  margin-left: 6vh;
 }/*# sourceMappingURL=styles.css.map */
