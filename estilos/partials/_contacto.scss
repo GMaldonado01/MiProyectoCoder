@@ -3,16 +3,14 @@
     text-align: center;
     color: $secondColor;
     margin-bottom: 30px;
-
-    .formulario {
-        margin-left: 20px;
-        margin-right: 20px;
-
-        .form-control {
-            padding-top: 20px;
-        }
-    }
 }
+
+.form-control {
+    width: 175vh;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 
 .form-floating {
     margin-top: 20PX;
