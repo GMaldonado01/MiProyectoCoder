@@ -1,0 +1,33 @@
+.recuadro {
+    width: 65%;
+    color: azure;
+    background-color: rgb(199, 223, 223);
+    border: 3px solid rgb(248, 224, 188);
+    float: right;
+    margin: 30px;
+    padding: 30px;
+    margin-left: 30%;
+    margin-bottom: 21%;
+
+    a {
+        background-color: rgb(233, 161, 165);
+        text-decoration: none;
+        color: azure;
+        padding: 10px 20px;
+        float: right;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 10px 20px;
+        color: rgb(233, 161, 165);
+    }
+
+    a:hover {
+        background-color: #333;
+        border: 3px solid rgb(248, 224, 188);
+    }
+}
