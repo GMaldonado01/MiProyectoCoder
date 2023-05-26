@@ -1,13 +1,12 @@
 .footer {
-    position: absolute;
-    bottom: 0;
     text-align: center;
     font-size: 45px;
     background-color: $secondColor;
     bottom: 0px;
     width: 100%;
     height: 70px;
-    
+    margin-top: auto;
+
     .redes {
         color: $mainColor;
     }

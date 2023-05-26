@@ -1,92 +1,102 @@
-.imagenesEventos {
-    margin-top: 3%;
-    width: 100%;
-    display: grid;
-    align-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 280px 280px;
-    grid-template-areas:
-        "img1   img2    img3"
-        "img4   img5    img6";
-    grid-gap: 15px;
+.todo {
+    background-color: $mainColor;
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 85px;
 
-    .imgEventos1 {
-        grid-area: img1;
-        background-image: url(../multimedia/cupcakes.jpg);
-        background-size: cover;
-        background-position: center;
-    }
+    .imagenesEventos {
+        margin-top: 3%;
+        margin-bottom: 1%;
+        width: 100%;
+        display: grid;
+        align-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 280px 280px;
+        grid-template-areas:
+            "img1   img2    img3"
+            "img4   img5    img6";
+        grid-gap: 15px;
 
-    .imgEventos2 {
-        grid-area: img2;
-        background-image: url(../multimedia/torta.jpg);
-        background-size: cover;
-        background-position: center;
-    }
+        .imgEventos1 {
+            grid-area: img1;
+            background-image: url(../multimedia/cupcakes.jpg);
+            background-size: cover;
+            background-position: center;
+        }
 
-    .imgEventos3 {
-        grid-area: img3;
-        background-image: url(../multimedia/tres\ pisos.jpg);
-        background-size: cover;
-        background-position: center;
-    }
+        .imgEventos2 {
+            grid-area: img2;
+            background-image: url(../multimedia/torta.jpg);
+            background-size: cover;
+            background-position: center;
+        }
 
-    .imgEventos4 {
-        grid-area: img4;
-        background-image: url(../multimedia/reina.jpeg);
-        background-size: cover;
-        background-position: center;
-    }
+        .imgEventos3 {
+            grid-area: img3;
+            background-image: url(../multimedia/tres\ pisos.jpg);
+            background-size: cover;
+            background-position: center;
+        }
 
-    .imgEventos5 {
-        grid-area: img5;
-        background-image: url(../multimedia/stich.jpeg);
-        background-size: cover;
-        background-position: center;
-    }
+        .imgEventos4 {
+            grid-area: img4;
+            background-image: url(../multimedia/reina.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .imgEventos5 {
+            grid-area: img5;
+            background-image: url(../multimedia/stich.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
 
 
-    .imgEventos6 {
-        grid-area: img6;
-        background-image: url(../multimedia/unicornio.jpeg);
-        background-size: cover;
-        background-position: center;
-    }
+        .imgEventos6 {
+            grid-area: img6;
+            background-image: url(../multimedia/unicornio.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
 
-    .imgEventos1:hover {
-        filter: saturate(180%);
-        transform: scale(1.1);
-        transition: 1s;
-    }
+        .imgEventos1:hover {
+            filter: saturate(180%);
+            transform: scale(1.1);
+            transition: 1s;
+        }
 
-    .imgEventos2:hover {
-        filter: saturate(180%);
-        transform: scale(1.1);
-        transition: 1s;
-    }
+        .imgEventos2:hover {
+            filter: saturate(180%);
+            transform: scale(1.1);
+            transition: 1s;
+        }
 
-    .imgEventos3:hover {
-        filter: saturate(180%);
-        transform: scale(1.1);
-        transition: 1s;
-    }
+        .imgEventos3:hover {
+            filter: saturate(180%);
+            transform: scale(1.1);
+            transition: 1s;
+        }
 
-    .imgEventos4:hover {
-        filter: saturate(180%);
-        transform: scale(1.1);
-        transition: 1s;
-    }
+        .imgEventos4:hover {
+            filter: saturate(180%);
+            transform: scale(1.1);
+            transition: 1s;
+        }
 
-    .imgEventos5:hover {
-        filter: saturate(180%);
-        transform: scale(1.1);
-        transition: 1s;
-    }
+        .imgEventos5:hover {
+            filter: saturate(180%);
+            transform: scale(1.1);
+            transition: 1s;
+        }
 
-    .imgEventos6:hover {
-        filter: saturate(180%);
-        transform: scale(1.1);
-        transition: 1s;
+        .imgEventos6:hover {
+            filter: saturate(180%);
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
     }
 
 }

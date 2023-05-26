@@ -24,14 +24,13 @@
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   text-align: center;
   font-size: 45px;
   background-color: rgb(233, 161, 165);
   bottom: 0px;
   width: 100%;
   height: 70px;
+  margin-top: auto;
 }
 .footer .redes {
   color: rgb(248, 224, 188);
@@ -39,20 +38,21 @@
 
 .todo {
   background-color: rgb(248, 224, 188);
-  position: relative;
-  height: 100vh;
-  padding-bottom: 85px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .todo .nleft {
-  border-radius: 20px;
   background-size: cover;
   background-position: center;
 }
 .todo .nleft img {
-  width: 100%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
   align-items: center;
-  margin-top: 1.5%;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-bottom: 1%;
   justify-content: center;
   animation: imagenMovimiento 2s;
   animation-timing-function: ease-in-out;
@@ -80,8 +80,16 @@
   text-shadow: 2px 2px rgb(233, 161, 165);
 }
 
-.imagenesProductos {
+.todo {
+  background-color: rgb(248, 224, 188);
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 85px;
+}
+.todo .imagenesProductos {
   margin-top: 3%;
+  margin-bottom: 1%;
   width: 100%;
   display: grid;
   align-content: center;
@@ -90,75 +98,74 @@
   grid-template-areas: "img1   img2    img3" "img4   img5    img6";
   grid-gap: 15px;
 }
-.imagenesProductos .img1 {
+.todo .imagenesProductos .img1 {
   grid-area: img1;
   background-image: url(../multimedia/alfa.jpeg);
   background-size: cover;
   background-position: center;
 }
-.imagenesProductos .img2 {
+.todo .imagenesProductos .img2 {
   grid-area: img2;
   background-image: url(../multimedia/choco.jpeg);
   background-size: cover;
   background-position: center;
 }
-.imagenesProductos .img3 {
+.todo .imagenesProductos .img3 {
   grid-area: img3;
   background-image: url(../multimedia/postre.jpg);
   background-size: cover;
   background-position: center;
 }
-.imagenesProductos .img4 {
+.todo .imagenesProductos .img4 {
   grid-area: img4;
   background-image: url(../multimedia/reina.jpeg);
   background-size: cover;
   background-position: center;
 }
-.imagenesProductos .img5 {
+.todo .imagenesProductos .img5 {
   grid-area: img5;
   background-image: url(../multimedia/stich.jpeg);
   background-size: cover;
   background-position: center;
 }
-.imagenesProductos .img6 {
+.todo .imagenesProductos .img6 {
   grid-area: img6;
   background-image: url(../multimedia/unicornio.jpeg);
   background-size: cover;
   background-position: center;
 }
-.imagenesProductos .img1:hover {
+.todo .imagenesProductos .img1:hover {
   filter: sepia();
   transform: scale(1.1);
   transition: 1s;
 }
-.imagenesProductos .img2:hover {
+.todo .imagenesProductos .img2:hover {
   filter: sepia();
   transform: scale(1.1);
   transition: 1s;
 }
-.imagenesProductos .img3:hover {
+.todo .imagenesProductos .img3:hover {
   filter: sepia();
   transform: scale(1.1);
   transition: 1s;
 }
-.imagenesProductos .img4:hover {
+.todo .imagenesProductos .img4:hover {
   filter: sepia();
   transform: scale(1.1);
   transition: 1s;
 }
-.imagenesProductos .img5:hover {
+.todo .imagenesProductos .img5:hover {
   filter: sepia();
   transform: scale(1.1);
   transition: 1s;
 }
-.imagenesProductos .img6:hover {
+.todo .imagenesProductos .img6:hover {
   filter: sepia();
   transform: scale(1.1);
   transition: 1s;
 }
-
 @media screen and (max-width: 720px) {
-  .imagenesProductos {
+  .todo .imagenesProductos {
     margin-top: 25px;
     width: 100%;
     display: grid;
@@ -168,39 +175,48 @@
     grid-template-areas: "img1   img2" "img3   img4" "img5   img6";
     grid-gap: 15px;
   }
-  .img1:hover {
+  .todo .img1:hover {
     filter: sepia();
     transform: scale(1.1);
     transition: 1s;
   }
-  .img2:hover {
+  .todo .img2:hover {
     filter: sepia();
     transform: scale(1.1);
     transition: 1s;
   }
-  .img3:hover {
+  .todo .img3:hover {
     filter: sepia();
     transform: scale(1.1);
     transition: 1s;
   }
-  .img4:hover {
+  .todo .img4:hover {
     filter: sepia();
     transform: scale(1.1);
     transition: 1s;
   }
-  .img5:hover {
+  .todo .img5:hover {
     filter: sepia();
     transform: scale(1.1);
     transition: 1s;
   }
-  .img6:hover {
+  .todo .img6:hover {
     filter: sepia();
     transform: scale(1.1);
     transition: 1s;
   }
 }
-.imagenesEventos {
+
+.todo {
+  background-color: rgb(248, 224, 188);
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 85px;
+}
+.todo .imagenesEventos {
   margin-top: 3%;
+  margin-bottom: 1%;
   width: 100%;
   display: grid;
   align-content: center;
@@ -209,91 +225,97 @@
   grid-template-areas: "img1   img2    img3" "img4   img5    img6";
   grid-gap: 15px;
 }
-.imagenesEventos .imgEventos1 {
+.todo .imagenesEventos .imgEventos1 {
   grid-area: img1;
   background-image: url(../multimedia/cupcakes.jpg);
   background-size: cover;
   background-position: center;
 }
-.imagenesEventos .imgEventos2 {
+.todo .imagenesEventos .imgEventos2 {
   grid-area: img2;
   background-image: url(../multimedia/torta.jpg);
   background-size: cover;
   background-position: center;
 }
-.imagenesEventos .imgEventos3 {
+.todo .imagenesEventos .imgEventos3 {
   grid-area: img3;
   background-image: url(../multimedia/tres\ pisos.jpg);
   background-size: cover;
   background-position: center;
 }
-.imagenesEventos .imgEventos4 {
+.todo .imagenesEventos .imgEventos4 {
   grid-area: img4;
   background-image: url(../multimedia/reina.jpeg);
   background-size: cover;
   background-position: center;
 }
-.imagenesEventos .imgEventos5 {
+.todo .imagenesEventos .imgEventos5 {
   grid-area: img5;
   background-image: url(../multimedia/stich.jpeg);
   background-size: cover;
   background-position: center;
 }
-.imagenesEventos .imgEventos6 {
+.todo .imagenesEventos .imgEventos6 {
   grid-area: img6;
   background-image: url(../multimedia/unicornio.jpeg);
   background-size: cover;
   background-position: center;
 }
-.imagenesEventos .imgEventos1:hover {
+.todo .imagenesEventos .imgEventos1:hover {
   filter: saturate(180%);
   transform: scale(1.1);
   transition: 1s;
 }
-.imagenesEventos .imgEventos2:hover {
+.todo .imagenesEventos .imgEventos2:hover {
   filter: saturate(180%);
   transform: scale(1.1);
   transition: 1s;
 }
-.imagenesEventos .imgEventos3:hover {
+.todo .imagenesEventos .imgEventos3:hover {
   filter: saturate(180%);
   transform: scale(1.1);
   transition: 1s;
 }
-.imagenesEventos .imgEventos4:hover {
+.todo .imagenesEventos .imgEventos4:hover {
   filter: saturate(180%);
   transform: scale(1.1);
   transition: 1s;
 }
-.imagenesEventos .imgEventos5:hover {
+.todo .imagenesEventos .imgEventos5:hover {
   filter: saturate(180%);
   transform: scale(1.1);
   transition: 1s;
 }
-.imagenesEventos .imgEventos6:hover {
+.todo .imagenesEventos .imgEventos6:hover {
   filter: saturate(180%);
   transform: scale(1.1);
   transition: 1s;
 }
 
-.pedido {
-  margin-top: 30px;
+.todo {
+  background-color: rgb(248, 224, 188);
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
+}
+.todo .pedido {
+  margin-top: 20px;
   text-align: center;
   color: rgb(233, 161, 165);
 }
-
-.form {
-  width: 80vh;
-  height: 50px;
+.todo .form {
+  width: 80%;
+  height: 30px;
   margin-bottom: 15px;
-  margin-left: 7.5vh;
+  align-content: center;
+  margin-left: 10%;
 }
-
-textarea {
-  margin-left: 45vh;
+.todo textarea {
+  width: 60%;
+  margin-left: 20%;
 }
-
-.mapa {
-  width: 170vh;
-  margin-left: 6vh;
+.todo .mapa {
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 2%;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,19 +1,21 @@
 .todo {
     background-color: $mainColor;
-    position: relative;
-    height: 100vh;
-    padding-bottom: 85px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 
     .nleft {
-        border-radius: 20px;
         background-size: cover;
         background-position: center;
 
         img {
-            width: 100%;
-            height: 90%;
+            width: 80%;
+            height: 80%;
             align-items: center;
-            margin-top: 1.5%;
+            margin-top: 10%;
+            margin-left: 10%;
+            margin-bottom: 1%;
             justify-content: center;
             animation: imagenMovimiento 2s;
             animation-timing-function: ease-in-out;

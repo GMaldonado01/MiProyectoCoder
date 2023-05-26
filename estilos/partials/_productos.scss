@@ -1,144 +1,153 @@
-.imagenesProductos {
-    margin-top: 3%;
-    width: 100%;
-    display: grid;
-    align-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 280px 280px;
-    grid-template-areas:
-        "img1   img2    img3"
-        "img4   img5    img6";
-    grid-gap: 15px;
+.todo {
+    background-color: $mainColor;
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 85px;
 
-    .img1 {
-        grid-area: img1;
-        background-image: url(../multimedia/alfa.jpeg);
-        background-size: cover;
-        background-position: center;
-    }
-
-    .img2 {
-        grid-area: img2;
-        background-image: url(../multimedia/choco.jpeg);
-        background-size: cover;
-        background-position: center;
-    }
-
-    .img3 {
-        grid-area: img3;
-        background-image: url(../multimedia/postre.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-
-    .img4 {
-        grid-area: img4;
-        background-image: url(../multimedia/reina.jpeg);
-        background-size: cover;
-        background-position: center;
-    }
-
-    .img5 {
-        grid-area: img5;
-        background-image: url(../multimedia/stich.jpeg);
-        background-size: cover;
-        background-position: center;
-    }
-
-
-    .img6 {
-        grid-area: img6;
-        background-image: url(../multimedia/unicornio.jpeg);
-        background-size: cover;
-        background-position: center;
-    }
-
-    .img1:hover {
-        filter: sepia();
-        transform: scale(1.1);
-        transition: 1s;
-    }
-
-    .img2:hover {
-        filter: sepia();
-        transform: scale(1.1);
-        transition: 1s;
-    }
-
-    .img3:hover {
-        filter: sepia();
-        transform: scale(1.1);
-        transition: 1s;
-    }
-
-    .img4:hover {
-        filter: sepia();
-        transform: scale(1.1);
-        transition: 1s;
-    }
-
-    .img5:hover {
-        filter: sepia();
-        transform: scale(1.1);
-        transition: 1s;
-    }
-
-    .img6:hover {
-        filter: sepia();
-        transform: scale(1.1);
-        transition: 1s;
-    }
-}
-
-
-@media screen and (max-width: 720px) {
     .imagenesProductos {
-        margin-top: 25px;
+        margin-top: 3%;
+        margin-bottom: 1%;
         width: 100%;
         display: grid;
         align-content: center;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 280px 280px 280px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 280px 280px;
         grid-template-areas:
-            "img1   img2"
-            "img3   img4"
-            "img5   img6";
+            "img1   img2    img3"
+            "img4   img5    img6";
         grid-gap: 15px;
+
+        .img1 {
+            grid-area: img1;
+            background-image: url(../multimedia/alfa.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img2 {
+            grid-area: img2;
+            background-image: url(../multimedia/choco.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img3 {
+            grid-area: img3;
+            background-image: url(../multimedia/postre.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img4 {
+            grid-area: img4;
+            background-image: url(../multimedia/reina.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img5 {
+            grid-area: img5;
+            background-image: url(../multimedia/stich.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        .img6 {
+            grid-area: img6;
+            background-image: url(../multimedia/unicornio.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img1:hover {
+            filter: sepia();
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .img2:hover {
+            filter: sepia();
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .img3:hover {
+            filter: sepia();
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .img4:hover {
+            filter: sepia();
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .img5:hover {
+            filter: sepia();
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .img6:hover {
+            filter: sepia();
+            transform: scale(1.1);
+            transition: 1s;
+        }
     }
 
-    .img1:hover {
-        filter: sepia();
-        transform: scale(1.1);
-        transition: 1s;
-    }
 
-    .img2:hover {
-        filter: sepia();
-        transform: scale(1.1);
-        transition: 1s;
-    }
+    @media screen and (max-width: 720px) {
+        .imagenesProductos {
+            margin-top: 25px;
+            width: 100%;
+            display: grid;
+            align-content: center;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 280px 280px 280px;
+            grid-template-areas:
+                "img1   img2"
+                "img3   img4"
+                "img5   img6";
+            grid-gap: 15px;
+        }
 
-    .img3:hover {
-        filter: sepia();
-        transform: scale(1.1);
-        transition: 1s;
-    }
+        .img1:hover {
+            filter: sepia();
+            transform: scale(1.1);
+            transition: 1s;
+        }
 
-    .img4:hover {
-        filter: sepia();
-        transform: scale(1.1);
-        transition: 1s;
-    }
+        .img2:hover {
+            filter: sepia();
+            transform: scale(1.1);
+            transition: 1s;
+        }
 
-    .img5:hover {
-        filter: sepia();
-        transform: scale(1.1);
-        transition: 1s;
-    }
+        .img3:hover {
+            filter: sepia();
+            transform: scale(1.1);
+            transition: 1s;
+        }
 
-    .img6:hover {
-        filter: sepia();
-        transform: scale(1.1);
-        transition: 1s;
+        .img4:hover {
+            filter: sepia();
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .img5:hover {
+            filter: sepia();
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .img6:hover {
+            filter: sepia();
+            transform: scale(1.1);
+            transition: 1s;
+        }
     }
 }

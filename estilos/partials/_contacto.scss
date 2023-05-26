@@ -1,21 +1,33 @@
-.pedido {
-    margin-top: 30px;
-    text-align: center;
-    color: $secondColor;
-}
+.todo {
+    background-color: $mainColor;
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
 
-.form {
-    width: 80vh;
-    height: 50px;
-    margin-bottom: 15px;
-    margin-left: 7.5vh;
-}
 
-textarea {
-    margin-left: 45vh;
-}
+    .pedido {
+        margin-top: 20px;
+        text-align: center;
+        color: $secondColor;
+    }
 
-.mapa {
-    width: 170vh;
-    margin-left: 6vh;
+    .form {
+        width: 80%;
+        height: 30px;
+        margin-bottom: 15px;
+        align-content: center;
+        margin-left: 10%;
+    }
+
+    textarea {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .mapa {
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 2%;
+    }
+
 }
