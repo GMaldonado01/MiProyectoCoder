@@ -1,0 +1,24 @@
+.todo {
+    background-color: $mainColor;
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 85px;
+
+    .tarjetitas {
+        margin-top: 3%;
+        margin-bottom: 2.5%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .tarjetita {
+        width: 50vh;
+    }
+
+    .tarjetitaImagen {
+        width: 100%;
+    }
+}

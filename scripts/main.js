@@ -1,98 +1,81 @@
-
-// do {
-//     edad = prompt('Ingrese su edad')
-
-
-//     if (edad >= 18) {
-//         alert('Sos mayor de edad. Podes ingresar')
-//     } else (edad < 18 || repetir == 'si')
-// }
-
-// var alfajores = [
-//     { nombre: "Alfajor de Maicena", precio: 1000 },
-//     { nombre: "Alfajor Marplatense", precio: 3600 },
-//     { nombre: "Alfalemon", precio: 3600 },
-//     { nombre: "Alfanevado", precio: 3600 },
-//     { nombre: "Alfacafe", precio: 3600 },
-//     { nombre: "Alfajor Santafesino", precio: 3000 },
-//     { nombre: "Alfajores de Nuez", precio: 3600 },
-//     { nombre: "Alfajor Rafaelinos", precio: 3000 },
-//     { nombre: "Alfacoco", precio: 3600 }
-// ];
-
-// var nombresAlfajores = alfajores.map(function (alfajor) {
-//     return alfajor.nombre;
-// });
-
-// var mensaje = '¿Cuál de estos alfajores quieres comprar?\n\n' + nombresAlfajores.join(', ');
-// var eleccion = prompt(mensaje);
-// console.log('Has elegido:', eleccion);
-
-// var continuarComprando = true;
-
-// do {
-//     var nombresAlfajores = alfajores.map(function (alfajor) {
-//         return alfajor.nombre;
-//     });
-
-//     var mensaje = '¿Cuál de estos alfajores quieres comprar?\n\n' + nombresAlfajores.join(', ');
-//     var eleccion = prompt(mensaje);
-//     console.log('Has elegido:', eleccion);
-
-//     var respuesta = prompt('¿Deseas hacer otra compra? (Sí/No)');
-//     if (respuesta !== 'Sí' && respuesta !== 'sí' && respuesta !== 'SI') {
-//         continuarComprando = false;
-//     }
-// } while (continuarComprando);
-
 var alfajores = [
-    { nombre: "Alfajor de Maicena", precio: 1000 },
-    { nombre: "Alfajor Marplatense", precio: 3600 },
-    { nombre: "Alfalemon", precio: 3600 },
-    { nombre: "Alfanevado", precio: 3600 },
-    { nombre: "Alfacafe", precio: 3600 },
-    { nombre: "Alfajor Santafesino", precio: 3000 },
-    { nombre: "Alfajores de Nuez", precio: 3600 },
-    { nombre: "Alfajor Rafaelinos", precio: 3000 },
-    { nombre: "Alfacoco", precio: 3600 }
+  { nombre: "Docena de Alfajor Marplatense", descripcion: "", precio: 3600, imagen: "../multimedia/alfajores/marplatense.jpg" },
+  { nombre: "Docena de Alfajor de Maicena", descripcion: "", precio: 1000, imagen: },
+  { nombre: "Docena de Alfalemon", descripcion: "", precio: 3600, imagen: },
+  { nombre: "Docena de Alfanevado", descripcion: "", precio: 3600, imagen: },
+  { nombre: "Docena de Alfacafe", descripcion: "", precio: 3600, imagen: },
+  { nombre: "Docena de Alfajor Santafesino", descripcion: "", precio: 3000, imagen: },
+  { nombre: "Docena de Alfajores de Nuez", descripcion: "", precio: 3600, imagen: },
+  { nombre: "Docena de Alfajor Rafaelinos", descripcion: "", precio: 3000, imagen: },
+  { nombre: "Docena de Alfacoco", descripcion: "", precio: 3600, imagen: },
 ];
 
-var total = 0;
-var deseaComprarMas = true;
+const contenedorProductos = document.getElementById("contenedorProductos");
+console.log(contenedorProductos);
+alfajores.forEach((element) => {
+  var tarjetita = document.createElement("div");
+  console.log(tarjetita);
+  tarjetita.className = "tarjetita";
 
-// Mayor de 18?
-var edad = prompt("Ingrese su edad:");
-if (parseInt(edad) < 18) {
-    alert("Lo sentimos, debes ser mayor de 18 años para comprar alfajores.");
-} else {
-    while (deseaComprarMas) {
-        var opciones = "";
+  var imagen = document.createElement("img");
+  imagen.src = "../multimedia/alfa.jpeg";
+  imagen.className = "tarjetitaImagen";
+  tarjetita.appendChild(imagen);
 
+  var titulo = document.createElement("h1");
+  titulo.innerText = element.nombre;
+  tarjetita.appendChild(titulo);
 
-        // Mostrar el array para que haga su eleccion
-        for (var i = 0; i < alfajores.length; i++) {
-            opciones += (i + 1) + ". " + alfajores[i].nombre + "\n";
-        }
+  var precio = document.createElement("h3");
+  precio.innerText = "$" + element.precio;
+  tarjetita.appendChild(precio);
 
-        // Seleccion del usuario 
-        var eleccion = prompt("Seleccione el número del alfajor que desea comprar:\n\n" + opciones);
+  var descripcion = document.createElement("h4");
+  descripcion.innerText = element.descripcion;
+  tarjetita.appendChild(descripcion);
 
-        // Validar la elección
-        eleccion = parseInt(eleccion);
-        if (!isNaN(eleccion) && eleccion >= 1 && eleccion <= alfajores.length) {
-            var alfajorSeleccionado = alfajores[eleccion - 1];
-            total += alfajorSeleccionado.precio;
+  var boton = document.createElement("button");
+  boton.className = "tarjetitaBoton";
+  tarjetita.appendChild(boton);
 
-            // Mostrar el nombre del alfajor seleccionado y la suma de los precios
-            alert("Ha seleccionado: " + alfajorSeleccionado.nombre + "\nTotal acumulado: " + total);
-        } else {
-            alert("La opción seleccionada es inválida.");
-        }
+  contenedorProductos.appendChild(tarjetita);
+});
 
-        // Preguntar si quiere comprar más
-        deseaComprarMas = confirm("¿Desea comprar otro alfajor?");
-    }
+// var total = 0;
+// var deseaComprarMas = true;
 
-    // Mostrar el total final
-    alert("El total a pagar es: " + total);
-}
+// // Mayor de 18?
+// var edad = prompt("Ingrese su edad:");
+
+// var opciones = "";
+// // Mostrar el array para que haga su eleccion
+// for (var i = 0; i < alfajores.length; i++) {
+//     opciones += (i + 1) + ". " + alfajores[i].nombre + "\n";
+// }
+
+// if (isNaN(parseInt(edad)) || parseInt(edad) < 18) {
+//     alert("Lo sentimos, debes ser mayor de 18 años para comprar alfajores.");
+// } else {
+//     while (deseaComprarMas) {
+//         // Seleccion del usuario
+//         var eleccion = prompt("Seleccione el número del alfajor que desea comprar:\n\n" + opciones);
+
+//         // Validar la elección
+//         eleccion = parseInt(eleccion);
+//         if (!isNaN(eleccion) && eleccion >= 1 && eleccion <= alfajores.length) {
+//             var alfajorSeleccionado = alfajores[eleccion - 1];
+//             total += alfajorSeleccionado.precio;
+
+//             // Mostrar el nombre del alfajor seleccionado y la suma de los precios
+//             alert("Ha seleccionado: " + alfajorSeleccionado.nombre + "\nTotal acumulado: " + total);
+//         } else {
+//             alert("La opción seleccionada es inválida.");
+//         }
+
+//         // Preguntar si quiere comprar más
+//         deseaComprarMas = confirm("¿Desea comprar otro alfajor?");
+//     }
+
+//     // Mostrar el total final
+//     alert("El total a pagar es: " + total);
+// }
