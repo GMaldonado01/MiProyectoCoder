@@ -1,13 +1,67 @@
 var alfajores = [
-  { nombre: "Docena de Alfajor Marplatense", descripcion: "", precio: 3600, imagen: "../multimedia/alfajores/marplatense.jpg" },
-  { nombre: "Docena de Alfajor de Maicena", descripcion: "", precio: 1000, imagen: },
-  { nombre: "Docena de Alfalemon", descripcion: "", precio: 3600, imagen: },
-  { nombre: "Docena de Alfanevado", descripcion: "", precio: 3600, imagen: },
-  { nombre: "Docena de Alfacafe", descripcion: "", precio: 3600, imagen: },
-  { nombre: "Docena de Alfajor Santafesino", descripcion: "", precio: 3000, imagen: },
-  { nombre: "Docena de Alfajores de Nuez", descripcion: "", precio: 3600, imagen: },
-  { nombre: "Docena de Alfajor Rafaelinos", descripcion: "", precio: 3000, imagen: },
-  { nombre: "Docena de Alfacoco", descripcion: "", precio: 3600, imagen: },
+  {
+    nombre: "Docena de Alfajor Marplatense",
+    descripcion:
+      "Tapas de chocolate rellenas de mucho dulce de leche, cubiertas de chocolate semiamargo y coronadas con cascaritas de naranja que le dan su toque de frescura",
+    precio: 3600,
+    imagen: "../multimedia/alfajores/marplatenses.jpeg",
+  },
+  {
+    nombre: "Docena de Alfajor de Maicena",
+    descripcion:
+      "Tapas de maicena que se desarman en la boca, rellenas de dulce de leche",
+    precio: 1000,
+    imagen: "../multimedia/alfajores/maicena.jpeg",
+  },
+  {
+    nombre: "Docena de Alfalemon",
+    descripcion:
+      "Tapas de vainilla rellenas de una crema de limón que combina el ácido y lo dulce, bañados con chocolate blanco",
+    precio: 3600,
+    imagen: "../multimedia/alfajores/alfalemon.jpeg",
+  },
+  {
+    nombre: "Docena de Alfanevado",
+    descripcion:
+      "Tapas de chocolate rellenas de dulce de leche y con un disco de merengue seco que produce una explosión de texturas al comerlo, cubiertas de chocolate semi amargo",
+    precio: 3600,
+    imagen: "../multimedia/alfajores/alfanevado.jpeg",
+  },
+  {
+    nombre: "Docena de Alfacafe",
+    descripcion:
+      "Tapas de chocolate rellenas con dulce de leche y un centro de crema de café con la intensidad justa para lograr un sabor único, cubierto de chocolate semiamargo",
+    precio: 3600,
+    imagen: "../multimedia/alfajores/alfacafe.jpg",
+  },
+  {
+    nombre: "Docena de Alfajor Santafesino",
+    descripcion:
+      "Tres tapas de masa crocante intercaladas de mucho dulce de leche y cubiertas por un suave glasé",
+    precio: 3000,
+    imagen: "../multimedia/alfajores/santafesino.jpeg",
+  },
+  {
+    nombre: "Docena de Alfajores de Nuez",
+    descripcion:
+      "Tapas de manteca y nueces tostadas, rellenas de dulce de leche",
+    precio: 3600,
+    imagen: "../multimedia/alfajores/nuez.jpeg",
+  },
+  {
+    nombre: "Docena de Alfajor Rafaelinos",
+    descripcion:
+      "Suaves tapas de masa de manteca, rellenas de dulce de leche repostero y espolvoreadas con azúcar impalpable",
+    precio: 3000,
+    imagen: "../multimedia/alfajores/rafaelinos.jpg",
+  },
+  {
+    nombre: "Docena de Alfacoco",
+    descripcion:
+      "Tapas de coco rallado azucarado, rellenas de dulce de leche y con una fina capa de chocolate amargo en la parte superior",
+    precio: 3600,
+    imagen: "../multimedia/alfajores/alfacoco.jpeg",
+  },
 ];
 
 const contenedorProductos = document.getElementById("contenedorProductos");
@@ -18,8 +72,8 @@ alfajores.forEach((element) => {
   tarjetita.className = "tarjetita";
 
   var imagen = document.createElement("img");
-  imagen.src = "../multimedia/alfa.jpeg";
   imagen.className = "tarjetitaImagen";
+  imagen.src = element.imagen;
   tarjetita.appendChild(imagen);
 
   var titulo = document.createElement("h1");
@@ -37,6 +91,9 @@ alfajores.forEach((element) => {
   var boton = document.createElement("button");
   boton.className = "tarjetitaBoton";
   tarjetita.appendChild(boton);
+  var icono = document.createElement("i");
+  icono.className = "fa-solid fa-cart-shopping";
+  boton.appendChild(icono);
 
   contenedorProductos.appendChild(tarjetita);
 });

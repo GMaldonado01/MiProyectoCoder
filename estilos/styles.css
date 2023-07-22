@@ -370,4 +370,12 @@
 }
 .todo .tarjetitaImagen {
   width: 100%;
+}
+.todo .tarjetitaBoton {
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
+  color: rgb(248, 224, 188);
+  background-color: rgb(233, 161, 165);
+  border: 0px;
 }/*# sourceMappingURL=styles.css.map */

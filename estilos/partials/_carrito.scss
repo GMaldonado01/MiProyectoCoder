@@ -21,4 +21,13 @@
     .tarjetitaImagen {
         width: 100%;
     }
+
+    .tarjetitaBoton {
+        width: 30px;
+        height: 30px;
+        border-radius: 20%;
+        color: $mainColor;
+        background-color: $secondColor;
+        border: 0px;
+    }
 }
