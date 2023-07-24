@@ -64,6 +64,28 @@ var alfajores = [
   },
 ];
 
+function obtenerCarrito() {
+  const carritoGuardado = localStorage.getItem("carrito");
+
+  if (carritoGuardado !== null) {
+    const carritoRecuperado = JSON.parse(carritoGuardado);
+
+    return carritoRecuperado;
+  } else {
+    return [];
+  }
+}
+
+function sumarCarrito(compra) {
+  let carrito = obtenerCarrito();
+  carrito.push(compra);
+  alert("usted lleva comprado " + carrito.length + " docenas");
+  console.log({ carrito });
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  // return carrito;
+}
+
 const contenedorProductos = document.getElementById("contenedorProductos");
 console.log(contenedorProductos);
 alfajores.forEach((element) => {
@@ -90,6 +112,7 @@ alfajores.forEach((element) => {
 
   var boton = document.createElement("button");
   boton.className = "tarjetitaBoton";
+  boton.onclick = () => sumarCarrito(element);
   tarjetita.appendChild(boton);
   var icono = document.createElement("i");
   icono.className = "fa-solid fa-cart-shopping";
@@ -97,6 +120,22 @@ alfajores.forEach((element) => {
 
   contenedorProductos.appendChild(tarjetita);
 });
+
+let compras = document.querySelectorAll(".tarjetitaBoton");
+console.log(compras);
+
+let finalizar = document.getElementById("finalizarCompra");
+finalizar.onclick = () => {
+  const carritoGuardado = localStorage.getItem("carrito");
+  console.log("carritoGuardado: ", carritoGuardado);
+  if (carritoGuardado !== null) {
+    const carritoRecuperado = JSON.parse(carritoGuardado);
+    console.log("carritoRecuperado: ", carritoRecuperado);
+    alert("usted compro " + carritoRecuperado.length + " docenas");
+  } else {
+    alert("Usted no realizo ninguna compra");
+  }
+};
 
 // var total = 0;
 // var deseaComprarMas = true;
