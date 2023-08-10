@@ -76,9 +76,26 @@
       </div>
     </nav>
 
-    <section id="contenedorProductos" class="tarjetitas"></section>
+    <button class="botonHola">
+      HOLA!
+      <br />
+      Comunicate con nosotros!
+    </button>
 
-    <button id="finalizarCompra">Finalizar compra</button>
+    <div id="localidadHumedad" class="localidadHumedad">
+      Cargando...
+      <br />
+    </div>
+
+    <section id="contenedorProductos" class="tarjetitas"></section>
+    <div id="cartContent"></div>
+
+    <div>
+      <button id="finalizarCompra" class="botonFinalizar">
+        Finalizar compra
+      </button>
+      <button id="cancelarCompra" class="botonCancelar">Cancelar compra</button>
+    </div>
 
     <footer class="footer">
       <div class="redes">
@@ -105,6 +122,7 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../scripts/main.js"></script>
   </body>
 </html>

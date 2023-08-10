@@ -76,16 +76,55 @@ function obtenerCarrito() {
   }
 }
 
+const dibujarCarrito = () => {
+  let cartContent = document.getElementById("cartContent");
+  cartContent.innerHTML = null;
+  var tituloCarrito = document.createElement("h1");
+  tituloCarrito.innerText = "Tu compra";
+  cartContent.appendChild(tituloCarrito);
+
+  obtenerCarrito().forEach((element) => {
+    console.log("element: ", element);
+    var cartItem = document.createElement("div");
+    cartItem.className = "cartItem"; // Agrega la clase CSS "cartItem" al elemento
+
+    var itemImage = document.createElement("img");
+    itemImage.className = "cartItemImage"; // Agrega la clase CSS "cartItemImage" al elemento
+    itemImage.src = element.imagen;
+    cartItem.appendChild(itemImage);
+
+    var itemName = document.createElement("h3");
+    itemName.innerText = element.nombre;
+    cartItem.appendChild(itemName);
+
+    var itemPrice = document.createElement("h5");
+    itemPrice.innerText = element.cantidad + " x $" + element.precio;
+    cartItem.appendChild(itemPrice);
+
+    cartContent.appendChild(cartItem);
+  });
+};
+
 function sumarCarrito(compra) {
   let carrito = obtenerCarrito();
-  carrito.push(compra);
-  alert("usted lleva comprado " + carrito.length + " docenas");
+  const indexCompraExistente = carrito.findIndex(
+    (item) => item.nombre === compra.nombre
+  );
+  console.log("indexCompraExistente: ", indexCompraExistente);
+  if (indexCompraExistente >= 0) {
+    carrito[indexCompraExistente].cantidad++;
+  } else {
+    compra.cantidad = 1;
+    carrito.push(compra);
+  }
+
+  alert("usted ha agregado una docena");
   console.log({ carrito });
   localStorage.setItem("carrito", JSON.stringify(carrito));
-
-  // return carrito;
+  dibujarCarrito();
 }
 
+dibujarCarrito();
 const contenedorProductos = document.getElementById("contenedorProductos");
 console.log(contenedorProductos);
 alfajores.forEach((element) => {
@@ -107,6 +146,7 @@ alfajores.forEach((element) => {
   tarjetita.appendChild(precio);
 
   var descripcion = document.createElement("h4");
+  descripcion.className = "tarjetitaDescripcion";
   descripcion.innerText = element.descripcion;
   tarjetita.appendChild(descripcion);
 
@@ -131,11 +171,52 @@ finalizar.onclick = () => {
   if (carritoGuardado !== null) {
     const carritoRecuperado = JSON.parse(carritoGuardado);
     console.log("carritoRecuperado: ", carritoRecuperado);
-    alert("usted compro " + carritoRecuperado.length + " docenas");
+    const cantidadTotal = carritoRecuperado.reduce((acc, cur) => {
+      return acc + cur.cantidad;
+    }, 0);
+    alert("usted compro " + cantidadTotal + " docenas");
+
+    localStorage.removeItem("carrito");
+    dibujarCarrito();
   } else {
     alert("Usted no realizo ninguna compra");
   }
 };
+let cancelar = document.getElementById("cancelarCompra");
+cancelar.onclick = () => {
+  localStorage.removeItem("carrito");
+  dibujarCarrito();
+};
+
+const sweetAlert = document.querySelector(".botonHola");
+
+sweetAlert.onclick = () => {
+  Swal.fire({
+    title: "Gracias por comunicarte!",
+    text: "Nuestro telefono es 0101010101001",
+    icon: "info",
+    confirmButtonText: "Aceptar",
+  });
+};
+fetch(
+  "http://api.weatherapi.com/v1/current.json?key=1fc8adaf39934f7693b202028233107&q=Rafaela&aqi=no"
+)
+  .then((response) => response.json())
+  .then((json) => {
+    const setearClima = () => {
+      let clima = document.getElementById("localidadHumedad");
+      clima.innerHTML =
+        json.location.name +
+        "<br/>" +
+        "Humedad " +
+        json.current.humidity +
+        "%" +
+        "<br/>" +
+        "Recomendamos que a más de 60% guardar en la heladera";
+    };
+
+    setTimeout(setearClima, 2000);
+  });
 
 // var total = 0;
 // var deseaComprarMas = true;

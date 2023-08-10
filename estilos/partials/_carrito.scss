@@ -12,6 +12,7 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+
     }
 
     .tarjetita {
@@ -19,7 +20,14 @@
     }
 
     .tarjetitaImagen {
-        width: 100%;
+        max-width: 400px;
+        max-height: 400px;
+        padding: 2px;
+    }
+
+    .tarjetitaDescripcion {
+        width: 400px;
+        text-align: justify;
     }
 
     .tarjetitaBoton {
@@ -29,5 +37,69 @@
         color: $mainColor;
         background-color: $secondColor;
         border: 0px;
+    }
+
+    .botonFinalizar {
+        color: $mainColor;
+        width: 50vh;
+        margin-left: 67vh;
+        background-color: $secondColor;
+        border: none;
+        margin-bottom: 2px;
+    }
+
+    .botonCancelar {
+        color: $mainColor;
+        width: 50vh;
+        margin-left: 67vh;
+        background-color: $secondColor;
+        border: none;
+        margin-bottom: 2px;
+
+    }
+
+    .botonHola {
+        margin-right: auto;
+        background-color: $secondColor;
+        color: $mainColor;
+        padding: 6px;
+        text-align: center;
+        border: double;
+    }
+
+    .localidadHumedad {
+        margin-left: auto;
+        background-color: $secondColor;
+        color: $mainColor;
+        padding: 6px;
+        text-align: center;
+        border: double;
+    }
+
+    #cartContent {
+        width: 500px;
+        margin-left: auto;
+        background-color: $secondColor;
+
+        h1 {
+            text-align: center;
+            color: $mainColor;
+        }
+    }
+
+    .cartItem {
+        padding: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        color: $mainColor;
+    }
+
+
+    .cartItemImage {
+        max-width: 100px;
+        max-height: 100px;
+        margin-right: 10px;
+        border-radius: 5%;
     }
 }
